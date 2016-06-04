@@ -1,11 +1,11 @@
 'use strict';
 
-let debug = require('debug');
-let debugInfo = debug('module:info');
+const debug = require('debug');
+const debugInfo = debug('module:info');
 setInterval(() => {
   debugInfo('some information.');
 }, 1000);
-let debugError = debug('module:error');
+const debugError = debug('module:error');
 setInterval(() => {
   debugError('some error.');
 }, 1000);
