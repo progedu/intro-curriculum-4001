@@ -9,6 +9,22 @@ const debugError = debug('module:error');
 setInterval(() => {
   debugError('some error.');
 }, 1000);
+const debugWarn = debug('module:warn');
+setInterval(() => {
+  debugWarn('some warns.');
+}, 1000);
+const debugThank = debug('module:thank');
+setInterval(() => {
+  debugThank('some .thanks');
+}, 1000);
+const debugNumber = debug('module:num');
+setInterval(() => {
+  debugNumber('some .nums');
+}, 1000);
+const debugValue = debug('module:value');
+setInterval(() => {
+  debugValue('some .values');
+}, 1000);
 
 var express = require('express');
 var path = require('path');
