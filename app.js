@@ -8,6 +8,7 @@ setInterval(() => {
 const debugError = debug('module:error');
 setInterval(() => {
   debugError('some error.');
+  console.log('［DEBUG=express-study:*,module:error  PORT=8000 npm start］コマンドを実行');
 }, 1000);
 
 var express = require('express');
