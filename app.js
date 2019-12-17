@@ -1,14 +1,20 @@
 'use strict';
 
 const debug = require('debug');
-const debugInfo = debug('module:info');
-setInterval(() => {
-  debugInfo('some information.');
-}, 1000);
+
+//debugInfoをコメントアウト
+//const debugInfo = debug('module:info');
+//setInterval(() => {
+//  debugInfo('some information.');
+//}, 1000);
 const debugError = debug('module:error');
 setInterval(() => {
   debugError('some error.');
-}, 1000);
+}, 1000*10);
+const debugWarning = debug('module:warning');
+setInterval(() => {
+  debugWarning('some warning.');
+}, 1000*10);
 
 var createError = require('http-errors');
 var express = require('express');
