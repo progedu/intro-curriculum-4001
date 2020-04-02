@@ -2,9 +2,9 @@
 
 const debug = require('debug');
 const debugInfo = debug('module:info');
-setInterval(() => {
-  debugInfo('some information.');
-}, 1000);
+//setInterval(() => {
+//  debugInfo('some information.');
+//}, 1000);
 const debugError = debug('module:error');
 setInterval(() => {
   debugError('some error.');
