@@ -1,3 +1,6 @@
+// 起動時の環境変数のコマンドを変更して、 module:error で設定されたログだけを出力するように して起動
+//コマンドは　DEBUG=module:error PORT=8000 yarn start
+
 'use strict';
 
 const debug = require('debug');
