@@ -1,10 +1,23 @@
+//DEBUG=module:error PORT=8000 yarn start
+//このコマンドで6色のログが出る
+
 'use strict';
 
 const debug = require('debug');
 const debugInfo = debug('module:info');
+
+debug.enable('*');
+const debugs = [];
+for (let i = 0; i < debug.colors.length; i++) {
+  const d = debug('example:' +i);
+  debugs.push(d);
+}
 setInterval(() => {
-  debugInfo('some information.');
-}, 1000);
+  for (let i = 0; i< debug.colors.length; i++) {
+    debugs[i]('The color is %o', debugs[i].color);
+  }
+  }, 1000);
+
 const debugError = debug('module:error');
 setInterval(() => {
   debugError('some error.');
